@@ -1,11 +1,13 @@
 # OpenTripPlanner-OD-matrix
-A series of scripts to calculate an origin-destination (OD) matrix across a study area using OpenTripPlanner. This can be run for a single time of the day (using 'python_script.py') or looping through several times in the day (using 'python_script_loopHM.py').
+A series of scripts to calculate an origin-destination (OD) matrix across a study area using OpenTripPlanner. This can be run for a single time of the day (using 'python_script.py') or looping through several times in the day (using 'python_script_loopHM.py'). Also included are scripts to further analyse the OD matrices.
 
-Also included are files to analyse the OD matrices.
+These functions were used to analyse OD-matrices in the following publications:
 
-# Files needed
+Mayaud, J. R., Tran, M., Pereira, R. H. M. & Nuttall, R. (2018). Future access to essential services in a growing smart city: The case of Surrey, British Columbia. Computers, Environment and Urban Systems.
 
+These scripts are based on the wonderful reproducible example provided by Rafa Pereira: https://github.com/rafapereirabr/otp-travel-time-matrix
 
+# Running the code
 1.	Download the following files from chosen city, and add in a city-specific folder in your ‘OpenTripPlanner’ folder:
 a.	GTFS (General Transit Feed Specification) data, as a zipped file
 b.	OpenStreetMap (OSM) data, as a .pbf file (e.g. available from Mapzen Metro extract: https://mapzen.com/data/metro-extracts/)
@@ -26,7 +28,7 @@ java -Xmx8G -jar otp-1.2.0-shaded.jar --cache /Users/jeromemayaud/Documents/Univ
 
 5.	Move the graph to a sub-folder within your main folder, which should be called ‘graph_folder’ 
 
-6.	In R, run ‘MakingHexagonalMaps’ (see Plotting-Data-Onto-Google-Maps-in-R repository on Jerome Mayaud's Github page). This outputs a CSV file (e.g. ‘points.csv’) to be used below.
+6.	In R, run ‘MakingHexagonalMaps'. This outputs a CSV file (e.g. ‘points.csv’) to be used below.
 
 7.	Move 'points.csv' into your OpenTripPlanner folder.
 
